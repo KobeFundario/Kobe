@@ -1,0 +1,18 @@
+# Function
+
+def print_line():
+    text = "Welcome to Python"
+    print(text)
+
+print_line()
+
+def voter_calc(Age):
+    Voter = 17
+    Age_diff = Voter - Age
+    if Age <= 0:
+        print("Are you kidding me! Please enter a valid age number.")
+    elif Age < Voter:
+        print("Age is too young to vote. Try again after" " " + str(Age_diff) + " " " year/s")
+    else: print("Age is qualified to vote.")
+
+voter_calc(int(input("Age: ")))

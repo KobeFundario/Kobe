@@ -1,0 +1,47 @@
+# BASIC ARITHMETIC OPERATIONS
+a, b = 3, 2
+print(a + b)
+print( a - b)
+print( a * b)
+print( a / b)
+print(a // b)
+print(a % b)
+print(a ** b)
+
+# BOOLEAN
+
+x, y = True, False
+
+print(x or y)
+print(x and y)
+print(not y)
+
+print(1 > 2)
+print(2 > 1)
+
+while(True):
+    break
+print("Hello World!")
+
+#while(True):
+#    continue
+#    print("Hello World Again")
+
+# Loop
+for i in [0, 1, 2]:
+    print(i)
+
+j = 1
+while j < 5:
+    print(j)
+    j = j + 1
+
+# condition
+Voter = 17
+Age = int(input("Your Age: "))
+Age_diff = Voter - Age
+if Age <= 0:
+    print("Are you kidding me! Please enter a valid age number.")
+elif Age < Voter:
+    print("Age is too young to vote. Try again after" " " + str(Age_diff) + " " " year/s")
+else: print("Age is qualified to vote.")
