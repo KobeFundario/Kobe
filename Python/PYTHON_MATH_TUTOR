@@ -1,0 +1,105 @@
+# BSIS-NS 2AB
+# Leynald Kobe S. Fundario
+# Jhon Patrick M. Torres
+
+import random
+
+def add(x, y):
+    return x + y
+
+def subtrct(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def dividiby(x, y):
+    return x / y
+
+while True:
+    print("\nOperations:")
+    print("1: Addition")
+    print("2: Subtraction")
+    print("3: Multiplication")
+    print("4: Division")
+    choice = input("Choose Operation: ")
+    if choice in ('1', '2', '3', '4'):
+
+        if choice == '1':
+            numOfproblem = int(input("How many problems?: "))
+            problem = 0
+            score = 0
+            while (problem < numOfproblem):
+                num1 = float(random.randint(0, 9))
+                num2 = float(random.randrange(2, 10, 2))
+                num3 = add(num1, num2)
+                print("\nWhat is the sum of " + str(num1) + " and " + str(num2))
+                answer = float(input("Enter your answer: "))
+                if num3 == answer:
+                    print("Correct")
+                    score = score + 1
+                else:
+                    print("Wrong! the correct answer is ", num3)
+                problem = problem + 1
+            print("\nScore: " + str(score) + "/" + str(numOfproblem))
+        
+        elif choice == '2':
+            numOfproblem = int(input("How many problems?: "))
+            problem = 0
+            score = 0
+            while (problem < numOfproblem):
+                num1 = float(random.randint(0, 9))
+                num2 = float(random.randrange(2, 10, 2))
+                num3 = subtrct(num1, num2)
+                print("\nWhat is the difference of " + str(num1) + " and " + str(num2))
+                answer = float(input("Enter your answer: "))
+                if num3 == answer:
+                    print("Correct")
+                    score = score + 1
+                else:
+                    print("Wrong! the correct answer is ", num3)
+                problem = problem + 1
+            print("\nScore: " + str(score) + "/" + str(numOfproblem))
+        
+        elif choice == '3':
+            numOfproblem = int(input("How many problems?: "))
+            problem = 0
+            score = 0
+            while (problem < numOfproblem):
+                num1 = float(random.randint(0, 9))
+                num2 = float(random.randrange(2, 10, 2))
+                num3 = multiply(num1, num2)
+                print("\nWhat is the product of " + str(num1) + " and " + str(num2))
+                answer = float(input("Enter your answer: "))
+                if num3 == answer:
+                    print("Correct")
+                    score = score + 1
+                else:
+                    print("Wrong! the correct answer is ", num3)
+                problem = problem + 1
+            print("\nScore: " + str(score) + "/" + str(numOfproblem))
+        
+        elif choice == '4':
+            numOfproblem = int(input("How many problems?: "))
+            problem = 0
+            score = 0
+            while (problem < numOfproblem):
+                num1 = round(float(random.randint(0, 9)), 2)
+                num2 = round(float(random.randrange(2, 10, 2)), 2)
+                num3 = dividiby(num1, num2)
+                print("\nWhat is the quotient of " + str(num1) + " and " + str(num2))
+                answer = float(input("Enter your answer: "))
+                if num3 == answer:
+                    print("Correct")
+                    score = score + 1
+                else:
+                    print("Wrong! the correct answer is ", num3)
+                problem = problem + 1
+            print("\nScore: " + str(score) + "/" + str(numOfproblem))
+    
+    try_again = input("\nWant to try again? (yes/no): ")
+    if try_again == "no" or try_again == "n":
+        break
+
+else:
+    print("Invalid Input 1 to 4 only.")
